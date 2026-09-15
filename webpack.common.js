@@ -34,4 +34,7 @@ export default {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  resolve: {
+    extensions: [".js"],
+  },
 };
