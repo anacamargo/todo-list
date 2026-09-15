@@ -1,8 +1,8 @@
 import { Todo } from "./Todo";
 
 export class Project {
-  constructor(name) {
-    this.id = crypto.randomUUID();
+  constructor(name, id) {
+    this.id = id ?? crypto.randomUUID();
     this.name = name;
     this.todoList = [];
   }

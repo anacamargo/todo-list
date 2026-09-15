@@ -1,8 +1,8 @@
 import { PRIORITY, STATUS } from "./constants";
 
 export class Todo {
-  constructor({ title, description, dueDate, notes, priority, status }) {
-    this.id = crypto.randomUUID();
+  constructor({ title, description, dueDate, notes, priority, status }, id) {
+    this.id = id ?? crypto.randomUUID();
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
