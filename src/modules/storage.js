@@ -1,8 +1,8 @@
-export const saveProjects = (projects) => {
-  localStorage.setItem("projects", JSON.stringify(projects));
+export const saveToStorage = (key, value) => {
+  localStorage.setItem(key, JSON.stringify(value));
 };
 
-export const loadProjects = () => {
-  const stored = localStorage.getItem("projects") ?? "[]";
-  return JSON.parse(stored);
+export const loadFromStorage = (key, defaultValue) => {
+  const stored = localStorage.getItem(key);
+  return JSON.parse(stored) ?? defaultValue;
 };

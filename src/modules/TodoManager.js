@@ -1,9 +1,9 @@
-import { Project } from "./Project";
-import { Todo } from "./Todo";
-import { loadProjects, saveProjects } from "./storage";
+import { Project } from "./Project.js";
+import { Todo } from "./Todo.js";
+import { loadFromStorage, saveToStorage } from "./storage.js";
 
 const projects = [];
-const storedProjects = loadProjects();
+const storedProjects = loadFromStorage("projects", []);
 
 export const createProject = (name) => {
   const project = new Project(name);
@@ -40,7 +40,7 @@ export const getAllProjects = () => {
   return projects;
 };
 
-const persist = () => saveProjects(projects);
+const persist = () => saveToStorage("projects", projects);
 
 export const initializeProjects = () => {
   storedProjects.forEach((rawProject) => {
