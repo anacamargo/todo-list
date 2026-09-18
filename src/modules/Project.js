@@ -1,4 +1,4 @@
-import { Todo } from "./Todo";
+import { Todo } from "./Todo.js";
 
 export class Project {
   constructor(name, id) {

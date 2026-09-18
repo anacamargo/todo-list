@@ -1,4 +1,4 @@
-import { PRIORITY, STATUS } from "./constants";
+import { PRIORITY, STATUS } from "./constants.js";
 
 export class Todo {
   constructor({ title, description, dueDate, notes, priority, status }, id) {
