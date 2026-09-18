@@ -12,6 +12,17 @@ export const createProject = (name) => {
   return project;
 };
 
+export const deleteProject = (projectId) => {
+  const projectIndex = projects.findIndex(
+    (project) => project.id === projectId
+  );
+  if (projectIndex === -1) {
+    throw new Error("Project not found");
+  }
+  projects.splice(projectIndex, 1);
+  persist();
+};
+
 export const getDefaultProject = () => {
   return projects.find((project) => project.name === "Default");
 };

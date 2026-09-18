@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <main></main>
+    <div>
+      <aside id="sidebar">
+        <header>
+          <button type="button" id="toggle-sidebar-btn">Collapse</button>
+          <h1>Todo List</h1>
+        </header>
+        <h3>Projects</h3>
+        <ul id="project-list"></ul>
+        <button type="button" id="add-project-btn">+ New project</button>
+      </aside>
+      <main id="main">
+        <div id="topbar">
+          <button type="button" id="toggle-theme-btn" aria-label="Toggle Theme">
+            <img src="images/moon.svg" alt="" />
+          </button>
+        </div>
+        <div id="content">
+          <div>
+            <h2 id="current-project-name"></h2>
+            <button type="button" id="add-todo-btn">+ New todo</button>
+          </div>
+          <section id="todo-list"></section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
